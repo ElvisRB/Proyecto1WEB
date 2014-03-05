@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Recommendatios";
+}
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".panel").slideToggle("slow");
+        });
+    </script>
+ 
+    <style type="text/css">
+    div.panel,p.flip {
+        padding: 5px;
+        background-image: url('http://4.bp.blogspot.com/_oJpV6yalpOk/TTLRKm-pdzI/AAAAAAAACiU/jo7CkZd1xuk/s1600/The-best-top-desktop-hd-dark-black-wallpapers-dark-black-wallpaper-dark-background-dark-wallpaper-23.jpg'); 
+        border: solid 1px #fff;
+        width:60%;
+        height: auto;
+        display: none;
+        margin-top: 2.5%; 
+        margin-left: 20%; 
+        color: white;
+    } 
+    </style>
+    @Styles.Render("~/Content/bootstrap.min.css", "~/Content/bootstrap.min.css")
+<br><br>
+        <div  class="panel" style="text-align: left";>
+                <input type="button"  style="background:#151515" value="Add New Recommendation" class="btn pull-right" onClick=" window.location.href = 'Recommend' " />
+        </div>
+            @foreach (var item in ViewBag.recommendations)
+        {
+            <div class="panel" style="text-align: left";>
+                <div class="form-group">
+                    <label>Recommendation @item.Id</label>
+                    <br>
+                    <label>Name: @item.Name</label>
+                    <br>
+                    <label>Phone: @item.Phone</label>
+                    <br>
+                    <label>Email: @item.Email </label>
+                    <br>
+                    <label>Recommendation:</label>
+                    <div>
+                        <textarea name="recomendation1" class="form-control" rows="5" disabled>@item.Recomendation1</textarea>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        }
+        <div class="panel" style="text-align: left";>
+                <input type="button" style="background:#151515" value="Add New Recommendation" class="btn pull-right" onClick=" window.location.href = 'Recommend' " />
+        </div>

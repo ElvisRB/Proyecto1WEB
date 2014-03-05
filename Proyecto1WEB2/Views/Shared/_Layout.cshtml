@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/css/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/js/bootstrap") 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrapjs") 
+</head>
+    
+    
+     
+<body>
+    @RenderBody()
+    
+   <style type="text/css"> 
+      body{ 
+      background-image: url('http://4.bp.blogspot.com/_oJpV6yalpOk/TTLRKm-pdzI/AAAAAAAACiU/jo7CkZd1xuk/s1600/The-best-top-desktop-hd-dark-black-wallpapers-dark-black-wallpaper-dark-background-dark-wallpaper-23.jpg'); 
+      background-repeat: repeat; 
+      background-size: auto; 
+      margin: 0 auto;
+          } 
+
+    </style>
+    
+    <ul class="nav navbar-default navbar-static-top nav-justified navbar-fixed-top navbar-inverse" role="navigation">
+    <li class="active"><a href="/Home" class="flip">Curriculum</a></li>
+    <li class="active"><a href="/Home/Contact" class="flip">Contact</a></li>
+    <li class="active"><a href="/Home/Recommend" class="flip">Recommend</a></li>
+    <li class="active"><a href="/Home/Recommendations" class="flip">Recommendations</a></li>
+    </ul>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
